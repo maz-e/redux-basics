@@ -13,6 +13,16 @@ export const storeResult = (res) => {
             dispatch(saveResult(res));
         }, 2000);  
     };
+
+    // Including logic and using getState into action creators but is better not include more logic here,
+    //   better into reducers. 
+    // return (dispatch, getState) => {
+    //     setTimeout(() => {
+    //         const oldCounter = getState().ctr.counter;
+    //         console.log(oldCounter);
+    //         dispatch(saveResult(res));
+    //     }, 2000);  
+    // };
 };
 
 export const deleteResult = (id) => {
